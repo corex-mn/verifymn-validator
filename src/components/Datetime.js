@@ -11,7 +11,7 @@ const prependZeroes = (n) => {
 }
 export const formatDate = (timestamp) => {
   const timeUTC = new Date(timestamp);
-  return `${timeUTC.getFullYear()}-${prependZeroes(timeUTC.getMonth() + 1)}-${prependZeroes(timeUTC.getDate())} ${timeUTC.getHours()}:${timeUTC.getMinutes()}`
+  return `${timeUTC.getFullYear()}-${prependZeroes(timeUTC.getMonth() + 1)}-${prependZeroes(timeUTC.getDate())} ${prependZeroes(timeUTC.getHours())}:${prependZeroes(timeUTC.getMinutes())}`
 }
 
 const Datetime = ({utc, singleRow = false}) => {
