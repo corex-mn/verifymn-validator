@@ -1,0 +1,8 @@
+node_modules/
+build/
+.yalc/
+yalc.lock
+public/main.js
+deploy.sh
+yarn-error.log
+.idea/
