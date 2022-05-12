@@ -15,16 +15,16 @@ $sub-color: #7E7CA6;
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gilroy', sans-serif;
 }
 
 body, html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gilroy', sans-serif;
 }
 
 html * {
     font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
 }
@@ -37,6 +37,8 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
+    background: url('/images/homeBg.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .bc-text-center{
@@ -264,18 +266,7 @@ body {
 p {
     margin: 0;
 }
-.hero-img{
-    height: 80vh;
-    //min-height: 75vh;
-    //background: #072273 0 0 no-repeat padding-box;
-    background: url('/images/background.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: flex;
-    flex-flow: column nowrap;
-}
+
 footer {
     min-height: 20vh;
     background: #04E8AA center;
@@ -284,7 +275,7 @@ footer {
 
 .navbar {
     width: 100%;
-    flex: 0;
+    //flex: 0;
 }
 
 .content {
@@ -343,22 +334,23 @@ footer {
 
 
 // New_UI
-
 #home-navbar{
-    position: fixed;
-    z-index: 10;
+    background-color: transparent;
+
+    .x-btn{
+        z-index: 12;
+    }
     .x-icon{
-        color: $primary-color;
+        color: #fff;
     }
     .burger-menu-wrapper{
-        height: 91vh;
+        height: 100vh;
         position: fixed;
-        top: 80px;
+        top: 1px;
         left: 0;
-        background: #fff;
+        background: #161A2D;
         z-index: 10;
-        border-top: 0.5px solid #e3e3e3;
-        padding: 0 32px;
+        padding: 32px 0;
 
         .sign-btn-block{
             width: 90vw;
@@ -369,104 +361,58 @@ footer {
         }
     }
     #mobile-menu{
-        a{
-            color:$secondary-color ;
+        .mobile-logo{
+            height: 64px;
+            border-bottom: 0.5px solid rgb(31 41 55);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 25px;
+            padding-left: 20px;
         }
-
         .signing{
-            background-color: $primary-color;
+            background-color: transparent;
             color: #fff;
+            border: 1px solid #fff;
+            border-radius: 6px;
         }
     }
 }
 
 #main-container{
-    .titleBlockchainText{
-        color: $primary-color;
-        font-family: 'Comfortaa', cursive;
+    .main-content{
+        margin-top: -150px;
     }
-    .landing-title-container{
-        @media screen and (max-width: 600px){
-            margin-top: 110px;
-        }
-        @media screen and (max-width: 1050px){
-            padding-right: 40px;
-            padding-left: 40px;
-        }
+    .logo-text{
+        font-family: 'Kodchasan', sans-serif;
     }
-    .landing-title{
-        color: $secondary-color;
-        font-family: 'Comfortaa', cursive;
+    .logo-sub-text{
+        color: #C9C9C9;
     }
-    .dropzone-field{
-        border: 1px solid $primary-color;
-        height: 80px;
-        max-width: 700px;
 
-        .text-sm{
-            line-height: 1rem;
-        }
+    .dropzone{
+        background-color: #fff;
+        padding: 22px;
+        height: 60px;
+        min-width: 40vw;
+        border-radius: 20px;
+        filter: drop-shadow(2px 2px 0.75rem #39609C);
+
         @media screen and (max-width: 640px) {
-            height: 60px;
+            height: 50px;
+            padding: 19px;
         }
 
-        @media screen and (max-width: 300px){
-            display: flex;
-            flex-direction: column;
-            height: 40px;
-            margin-bottom: 60px;
-        }
-
-        .dropzone{
-            width: 100%;
-            cursor: pointer;
-            margin: 5px;
-
-            .dropzone-text{
-                @media screen and (max-width: 640px) {
-                    font-size: 12px;
-                    line-height: 12px;
-                }
-            }
-
-            .dropzone-btn{
-                background-color: $primary-color;
-                font-size: 16px;
-                padding: 26px 20px;
-                color: #fff;
-                font-weight: 500;
-                text-align: center;
-
-                @media screen and (max-width: 640px) {
-                    padding: 16px 20px;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-    .grid-cols-1{
-        @media screen and (max-width: 1050px) {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-        }
-    }
-}
-
-#sub-container{
-    background-color: #FDFDFF;
-
-    h1{
-        color: $sub-color;
-        @media screen and (max-width: 768px){
-            text-align: center;
+        #pdf_dropzone{
+            color: #3D2F7C;
         }
     }
 }
 
 #footer{
-    background-color: #FDFDFF;
-    border-top: 1px solid #F6F6F6;
-
+    background-color: transparent;
     a{
-        color: $sub-color;
+        color: #fff;
     }
 }

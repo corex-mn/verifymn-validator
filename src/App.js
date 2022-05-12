@@ -12,11 +12,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Modal from './components/Modal';
 
-import numlogo from "./assets/images/school-logos/logo_num.png";
-import mustlogo from "./assets/images/school-logos/logo_must.png";
-import ufelogo from "./assets/images/school-logos/logo-ufe.png";
-import LandingAnimationLottie from "./components/LandingAnimation/LandingImage";
-
 class App extends React.Component {
   state = {
     loading: false,
@@ -71,51 +66,27 @@ class App extends React.Component {
 
   render() {
     return (
-        <div className="App">
+        <div className="App flex flex-col justify-between h-screen">
           <Navbar/>
-
-          <div className={'container mx-auto'} id={'main-container'}>
-            <div className={'grid grid-cols-1 md:grid-cols-2 gap-4'}>
-              <div className={'landing-title-container lg:mt-52 sm:mt-44 px-10 md:px-0'}>
-                <div className={'mb-10 sm:mb-16'}>
-                  <h1 className={'landing-title text-[22px] sm:text-[32px] font-bold uppercase'}><span className={'titleBlockchainText text-[22px] sm:text-[32px] font-bold'}>Блокчэйн</span> Сүлжээнд</h1>
-                  <h1 className={'landing-title text-[22px] sm:text-[32px] font-bold uppercase'}>Дипломоо Баталгаажуул</h1>
-                </div>
-
-                <div className={'dropzone-field flex justify-between'}>
-                  <Dropzone className={'drag-and-drop cursor-pointer'} onDrop={this.processPDF} multiple={false} accept="application/pdf" style={'background-color:pink'}>
+          <div className={'container mx-auto flex justify-center'} id={'main-container'}>
+              <div className={"main-content px-6 sm:px-0"}>
+                  <h1 className={'logo-text text-white text-center text-[50px] sm:text-[80px] font-bold mb-1'}>Verify</h1>
+                  <h4 className={'logo-sub-text text-[16px] sm:text-[24px] text-white text-center font-normal mb-14'}>Блокчэйн сүлжээнд баталгаажуул.</h4>
+                  <Dropzone className={'drag-and-drop cursor-pointer'} onDrop={this.processPDF} multiple={false} accept="application/pdf">
                     {({getRootProps, getInputProps, isDragActive}) => (
                         <div {...getRootProps()} className={classNames('dropzone', {'hover': isDragActive})}>
                           <input id='pdf_dropzone' {...getInputProps()} />
                           {
                             isDragActive ?
-                                <div id='pdf_dropzone' className={'text-sm sm:text-base font-medium mx-4 sm:mx-8 mt-3 sm:mt-7'}>Файл (drag & drop)</div> :
-                                <div id='pdf_dropzone' className={'text-sm sm:text-base font-medium flex justify-between'}>
-                                  <span className={'dropzone-text self-center mx-4 sm:mx-6'}>Диплом оруулах хэсэг</span>
-                                  <span className={'dropzone-btn uppercase'}>Баталгаажуулах</span>
+                                <div id='pdf_dropzone' className={'text-xs sm:text-sm font-normal uppercase'}>Файл оруулах</div> :
+                                <div id='pdf_dropzone' className={'text-xs sm:text-sm font-normal uppercase'}>
+                                  <span className={'dropzone-text self-center mx-4'}>Файл оруулах</span>
                                 </div>
                           }
                         </div>
                     )}
                   </Dropzone>
-                </div>
               </div>
-              <div className={'flex justify-center lg:mt-28 md:mt-16'}>
-                <LandingAnimationLottie/>
-              </div>
-
-            </div>
-          </div>
-
-          <div id={'sub-container'}>
-            <div className={'w-full mx-auto px-16 pt-10 pb-6'}>
-              <h1 className={'text-lg font-medium uppercase mb-8'}>Байгууллагууд</h1>
-                <div className={'flex justify-center md:justify-start'}>
-                <img src={numlogo} className={"h-16"} alt={"Num_logo"}/>
-                <img src={mustlogo} className={"h-16 px-12"} alt={"Num_logo"}/>
-                <img src={ufelogo} className={"h-16 "} alt={"Num_logo"}/>
-              </div>
-            </div>
           </div>
 
           <Footer/>
