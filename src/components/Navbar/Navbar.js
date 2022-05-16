@@ -30,7 +30,7 @@ const Navbar = () => {
                      id={"mobile-menu"}>
                     <ul className={"flex flex-col mt-14 md:flex-row ml-9 md:mt-0"}>
                         <li>
-                            <a href={"https://dashboard.certify.mn/login"} target={"_blank"}
+                            <a href={"#"} target={"_blank"}
                                className={"mobile-logo md:hidden"}>
                                 <img src={verifyLogo} className={"mr-3 h-6"} alt={"Verify Logo"}/>
                             </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
                         {/*       aria-current="page">Байгууллагууд</a>*/}
                         {/*</li>*/}
                         <li>
-                            <a href={'https://dashboard.certify.mn/login'}
+                            <a href={'#'}
                                className={"signing text-white block px-4 py-2.5" + (isOpen ? " sign-btn-block left-1/2 -translate-x-1/2" : " ")}>Нэвтрэх</a>
                         </li>
                     </ul>

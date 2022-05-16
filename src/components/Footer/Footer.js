@@ -7,7 +7,7 @@ const Footer = () => {
             {/*<ul className={"flex justify-end mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"}>*/}
                 <ul className={"flex justify-end mt-4"}>
                 <li>
-                    <a href="https://dashboard.certify.mn/privacy-policy"
+                    <a href="#"
                        className={"block py-2 text-white text-xs sm:text-sm font-normal"}
                        aria-current="page">Нууцлалын бодлого</a>
                 </li>
