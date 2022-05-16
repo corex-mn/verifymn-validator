@@ -71,7 +71,7 @@ class App extends React.Component {
           <div className={'container mx-auto flex justify-center'} id={'main-container'}>
               <div className={"main-content px-6 sm:px-0"}>
                   <h1 className={'logo-text text-white text-center text-[50px] sm:text-[80px] font-bold mb-1'}>Verify</h1>
-                  <h4 className={'logo-sub-text text-[16px] sm:text-[24px] text-white text-center font-normal mb-14'}>Блокчэйн сүлжээнд баталгаажуул.</h4>
+                  <h4 className={'logo-sub-text text-[16px] sm:text-[24px] text-white text-center font-normal mb-14'}>Блокчэйн сүлжээнд баталгаажуул</h4>
                   <Dropzone className={'drag-and-drop cursor-pointer'} onDrop={this.processPDF} multiple={false} accept="application/pdf">
                     {({getRootProps, getInputProps, isDragActive}) => (
                         <div {...getRootProps()} className={classNames('dropzone', {'hover': isDragActive})}>
