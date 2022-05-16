@@ -28,7 +28,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/aaruul-react-web
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/verifymn-validator
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
