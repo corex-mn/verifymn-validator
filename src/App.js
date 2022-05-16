@@ -8,8 +8,8 @@ import './assets/css/main.css';
 import './scss/App.scss';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import Modal from './components/Modal';
 
 class App extends React.Component {
